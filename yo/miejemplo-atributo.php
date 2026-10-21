@@ -32,7 +32,7 @@ header('Content-Type: text/html; charset=utf-8');
 // En lugar de mostrar el xml, creo un archivo nuevo
 
 
-$end_file = "holahola/plan-de-portabilidad.xml";
+$end_file = "./plan-de-portabilidad.xml";
 
 if($xml->asXML($end_file)) {
     echo "Exitoso detectado " . $end_file . " creado correctamente";
