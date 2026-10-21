@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<video_juegos>
+    <juego id="1">
+        <titulo>The Legend of Zelda: Breath of the Wild</titulo>
+        <plataforma>Nintendo Switch</plataforma>
+        <lanzamiento>2017</lanzamiento>
+        <genero>Aventura</genero>
+        <puntuacion>9.7</puntuacion>
+    </juego>
+    <juego id="2">
+        <titulo>God of War Ragnarök</titulo>
+        <plataforma>PlayStation 5</plataforma>
+        <lanzamiento>2022</lanzamiento>
+        <genero>Acción</genero>
+        <puntuacion>9.4</puntuacion>
+    </juego>
+    <juego id="3">
+        <titulo>Minecraft</titulo>
+        <plataforma>Multiplataforma</plataforma>
+        <lanzamiento>2011</lanzamiento>
+        <genero>Sandbox</genero>
+        <puntuacion>9.0</puntuacion>
+    </juego>
+</video_juegos>
