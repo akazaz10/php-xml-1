@@ -43,10 +43,10 @@
     /* 
         simplexml_load_file: Opción directa para XML
         Es la función específica de PHP para cargar y parrsear un archivo XML directamente en un
-        objeto SiimpleXMLElement.
+        objeto SimpleXMLElement.
 
         - Cuándo usarla: Cuando quieres leer el archivo XML y empezar a recorrerlo, buscar datos o 
-        manipular sus nodos de forma inmedianta sin passos intermedios.
+        manipular sus nodos de forma inmedianta sin pasos intermedios.
 
 
     */
