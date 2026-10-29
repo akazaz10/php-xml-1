@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo fecha="2026" pais="España">
+
+    <pelicula id="1" destacada="true">
+        <titulo>Interstellar</titulo>
+        <anio>2014</anio>
+        <genero>Ciencia ficción</genero>
+        <duracion unidad="minutos">169</duracion>
+
+        <!-- <director id="d1">
+            <nombre>Christopher Nolan</nombre>
+            <nacionalidad>Británica</nacionalidad>
+        </director>
+
+        <valoracion escala="10">
+            <nota>8.7</nota>
+            <votos>2500000</votos>
+        </valoracion>
+
+        <actores>
+            <actor id="a1" protagonista="true">
+                <nombre>Matthew McConaughey</nombre>
+                <personaje>Cooper</personaje>
+            </actor>
+            <actor id="a2" protagonista="false">
+                <nombre>Anne Hathaway</nombre>
+                <personaje>Amelia Brand</personaje>
+            </actor>
+        </actores> -->
+    </pelicula>
+
+    <pelicula id="2" destacada="false">
+        <titulo>Inception</titulo>
+        <anio>2010</anio>
+        <genero>Thriller</genero>
+        <duracion unidad="minutos">148</duracion>
+
+        <!-- <director id="d1">
+            <nombre>Christopher Nolan</nombre>
+            <nacionalidad>Británica</nacionalidad>
+        </director>
+
+        <valoracion escala="10">
+            <nota>8.8</nota>
+            <votos>2300000</votos>
+        </valoracion>
+
+        <actores>
+            <actor id="a3" protagonista="true">
+                <nombre>Leonardo DiCaprio</nombre>
+                <personaje>Dom Cobb</personaje>
+            </actor>
+            <actor id="a4" protagonista="false">
+                <nombre>Joseph Gordon-Levitt</nombre>
+                <personaje>Arthur</personaje>
+            </actor>
+        </actores> -->
+    </pelicula>
+
+    <pelicula id="3" destacada="true">
+        <titulo>El señor de los anillos: La comunidad del anillo</titulo>
+        <anio>2001</anio>
+        <genero>Fantasía</genero>
+        <duracion unidad="minutos">178</duracion>
+
+        <!-- <director id="d2">
+            <nombre>Peter Jackson</nombre>
+            <nacionalidad>Neozelandesa</nacionalidad>
+        </director>
+
+        <valoracion escala="10">
+            <nota>8.9</nota>
+            <votos>1900000</votos>
+        </valoracion>
+
+        <actores>
+            <actor id="a5" protagonista="true">
+                <nombre>Elijah Wood</nombre>
+                <personaje>Frodo Bolsón</personaje>
+            </actor>
+            <actor id="a6" protagonista="false">
+                <nombre>Ian McKellen</nombre>
+                <personaje>Gandalf</personaje>
+            </actor>
+        </actores> -->
+    </pelicula>
+
+</catalogo>
