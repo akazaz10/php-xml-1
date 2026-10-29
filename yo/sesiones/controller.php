@@ -2,9 +2,10 @@
 session_start();
 
 if ($_POST['user'] == "akazaz" && $_POST['password'] == "123") {
-    $_SESSION['name'] = "Zahir";
+// if ($_GET['user'] == "akazaz" && $_GET['password'] == "123") {
+    $_SESSION['name'] = "Sebastian Zahir";
     $_SESSION['lastname'] = "Martinez Puerta";
-    header("location: home.php");
+    header("location: ./home.php");
 
 } else {
     echo "Los datos no son correctos";

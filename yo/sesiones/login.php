@@ -14,6 +14,7 @@
 </head>
 <body>
     <form action="controller.php" method="post">
+    <!-- <form action="controller.php" method="get"> -->
         <input type="text" name="user" placeholder="Usuario">
         <br>
         <input type="password" name="password" placeholder="Contraseña">

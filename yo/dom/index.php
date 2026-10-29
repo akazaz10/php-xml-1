@@ -24,4 +24,9 @@ $dom->loadXML($xml->asXML());
 $dom->save('products.xml');
 
 
+// header("Content-Type: application/xml; charset='utf-8'");
+
+// echo $dom->saveXML();
+
+
 ?>

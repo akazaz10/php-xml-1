@@ -4,6 +4,8 @@ $xml = simplexml_load_file("./movies.xml") or die("Error al cargar");
 
 header("Content-Type: application/xml; charset='utf-8'");
 
+// header("Content-Type: text/html; charset='utf-8'");
+
 
 // echo var_dump($xml);
 
