@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tienda nombre="Deportes Rápidos" ciudad="Barcelona">
+    <productos>
+        <producto id="p001" categoria="calzado" disponible="true">
+            <nombre>Zapatillas de running</nombre>
+            <marca>SpeedRun</marca>
+            <precio moneda="EUR">89.95</precio>
+            <stock>12</stock>
+            <descripcion>Zapatillas ligeras para entrenamiento diario.</descripcion>
+        </producto>
+
+        
+
+        <producto id="p003" categoria="accesorios" disponible="false">
+            <nombre>Botella térmica</nombre>
+            <marca>HydroMax</marca>
+            <precio moneda="EUR">18.75</precio>
+            <stock>0</stock>
+            <descripcion>Botella reutilizable de acero inoxidable.</descripcion>
+        </producto>
+
+        <producto id="p004" categoria="balones" disponible="true">
+            <nombre>Balón de fútbol</nombre>
+            <marca>ProBall</marca>
+            <precio moneda="EUR">39.99</precio>
+            <stock>8</stock>
+            <descripcion>Balón oficial para entrenamiento y competición.</descripcion>
+        </producto>
+    </productos>
+
+    <clientes>
+        <cliente id="c001">
+            <nombre>Laura García</nombre>
+            <ciudad>Barcelona</ciudad>
+            <email>laura@example.com</email>
+        </cliente>
+
+        <cliente id="c002">
+            <nombre>Mario López</nombre>
+            <ciudad>Girona</ciudad>
+            <email>mario@example.com</email>
+        </cliente>
+    </clientes>
+</tienda>
