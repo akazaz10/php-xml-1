@@ -3,11 +3,12 @@ require './config.php';
 session_start();
 
 $xml = simplexml_load_file("./users.xml");
+$xmlConnections = simplexml_load_file("./connections.xml");
 
 if (isset($_GET['action'])) {
     
     // 1. CASO LOGIN
-    if ($_GET['action'] === 'Login') {
+    if ($_GET['action'] === 'login') {
 
         $userDni = $_GET['dni'] ?? '';
         $userPassword = $_GET['password'] ?? '';
@@ -28,7 +29,7 @@ if (isset($_GET['action'])) {
                 $_SESSION['last_name'] = (string)$user->last_name;
 
                 // Registro de la conexión
-                $xmlConnections = simplexml_load_file("./connections.xml");
+                
                 $newConnection = $xmlConnections->addChild("connection");
                 $newConnection->addChild('dni', (string)$user->dni);
                 $newConnection->addChild('login_time', date('Y-m-d H:i:s'));
@@ -42,7 +43,7 @@ if (isset($_GET['action'])) {
         }
 
     // 2. CASO REGISTRO
-    } elseif ($_GET['action'] === 'addUser') {
+    } elseif ($_GET['action'] === 'register') {
 
         $userDni = $_GET['dni'] ?? '';
         $userName = $_GET['name'] ?? '';
@@ -70,7 +71,7 @@ if (isset($_GET['action'])) {
                 echo "Usuario registrado correctamente en el XML.";
             }
         }
-    } elseif ($_GET['action'] === 'Logout') {
+    } elseif ($_GET['action'] === 'logout') {
         
         $userDni = $_GET['dni'] ?? '';
         $xmlConnections = simplexml_load_file("./connections.xml");

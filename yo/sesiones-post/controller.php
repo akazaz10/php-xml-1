@@ -4,20 +4,25 @@ require './config.php';
 
 session_start();
 
+// Usuarios
+
 $xml = simplexml_load_file("./users.xml");
 
+// Conexiones
 
+$xmlConnections = simplexml_load_file("./connections.xml");
 
 
 
 
 if (isset($_POST['action'])) {
+    
     if ($_POST['action'] === 'login') {
 
         $userDni = $_POST['dni'] ?? '';
-        $userName = $_POST['name'] ?? '';
-        $userLastName = $_POST['last_name'] ?? '';
-        $userAge = $_POST['age'] ?? '';
+        // $userName = $_POST['name'] ?? '';
+        // $userLastName = $_POST['last_name'] ?? '';
+        // $userAge = $_POST['age'] ?? '';
         $userPassword = $_POST['password'] ?? '';
 
         $existingUser = $xml->xpath("user[dni='{$userDni}']");
@@ -47,7 +52,7 @@ if (isset($_POST['action'])) {
 
                     // Registro de la session
 
-                    $xmlConnections = simplexml_load_file("./connections.xml");
+                    
 
                     $newConnection = $xmlConnections->addChild("connection");
                     $newConnection->addChild('dni', (string)$user->dni);
