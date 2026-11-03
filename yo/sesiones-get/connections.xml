@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections>
+  <connection>
+    <dni>Z3698676M</dni>
+    <login_time>2026-11-03 02:06:24</login_time>
+    <logout_time>2026-11-03 02:08:21</logout_time>
+    <status>expired</status>
+  </connection>
+  <connection>
+    <dni>aureT12</dni>
+    <login_time>2026-11-03 02:28:45</login_time>
+    <logout_time>2026-11-03 02:30:12</logout_time>
+    <status>expired</status>
+  </connection>
+</connections>

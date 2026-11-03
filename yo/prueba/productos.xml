@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+  <producto>
+    <nombre>Teclado Mecánico</nombre>
+    <precio>45</precio>
+  </producto>
+  <producto>
+    <nombre>Teclado Mecánico</nombre>
+    <precio>45</precio>
+  </producto>
+  <producto>
+    <nombre>Teclado Mecánico</nombre>
+    <precio>45</precio>
+  </producto>
+  <producto>
+    <nombre>Teclado Mecánico</nombre>
+    <precio>45</precio>
+  </producto>
+</productos>
