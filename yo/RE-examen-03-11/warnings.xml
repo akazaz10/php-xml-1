@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<warnings>
+    <login>
+        <warning state="unknownUser">
+            El usuario no existe
+        </warning>
+        <warning state="incorrectPassword">
+            Contraseña incorrecta
+        </warning>
+    </login>
+    <register>
+        <warning state="dniRegistered">
+            El DNI ya está registrado
+        </warning>
+        <warning state="parameters">
+            Todos los parámetros deben ser rellenados
+        </warning>    
+    </register>
+
+    <logout>
+        <warning state="notExist">
+            No existe ninguna sesión activa
+        </warning>    
+    </logout>
+</warnings>
