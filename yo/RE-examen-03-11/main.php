@@ -1,10 +1,11 @@
 <?php
-require './config.php';
+require './userFunctions.php';
+require './connectionsFunctions.php';
 session_start();
 
-$usersXml = simplexml_load_file("./users.xml");
-$connectionsXml = simplexml_load_file("./connections.xml");
-$warningsXml = simplexml_load_file("./warnings.xml");
+$usersXml = simplexml_load_file("./xml/users.xml");
+$connectionsXml = simplexml_load_file("./xml/connections.xml");
+$warningsXml = simplexml_load_file("./xml/warnings.xml");
 
 
 $action = $_GET['action'] ?? '';

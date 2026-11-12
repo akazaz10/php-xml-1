@@ -1,0 +1,18 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #222;
+    color: rgb(209, 209, 209);
+
+    button {
+        margin-left: 1rem;
+    }
+
+    span {
+
+        strong {
+            color: gold;
+        }
+        
+    }
+
+}
