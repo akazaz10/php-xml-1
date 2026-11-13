@@ -1,7 +1,10 @@
 <?php
+session_start();
 require './userFunctions.php';
 require './connectionsFunctions.php';
-session_start();
+
+
+header("Content-Type: application/xml; charset=utf-8");
 
 $usersXml = simplexml_load_file("./xml/users.xml");
 $connectionsXml = simplexml_load_file("./xml/connections.xml");
@@ -19,8 +22,6 @@ $userAge = $_GET['age'] ?? '';
 $userPassword = $_GET['password'] ?? '';
 
 
-header("Content-Type: application/xml; charset=utf-8");
-// echo $usersXml->asXml();
 
 
 switch ($action) {
@@ -31,27 +32,22 @@ switch ($action) {
             echo $loginWarning[0]->asXml();            
             break;
         } 
-
-        $output = loginValidator($userDni, $userPassword, $usersXml);
+        $output = passwordValidator($userDni, $userPassword, $usersXml);
 
         if ($output['bool'] == true) {
-            
-            addNewConnection($connectionsXml, $output['user']->dni);
-
-
+            $_SESSION['dni'] = $output['user']->dni;
+            $_SESSION['name'] = $output['user']->name;
+            $_SESSION['last_name'] = $output['user']->last_name;
+            addNewConnection($connectionsXml);
         } else {
             $loginWarning = $warningsXml->xpath("//warning[@state='incorrectPassword']");
             echo $loginWarning[0]->asXml();
 
         }
-
-        ///////
-        // header('location: ./login.php');
         break;
-    
 
     case "register":
-        if (empty($userDni) || empty($userName) || empty($userLastName) || empty($userAge) || empty($userPassword)) {
+        if (parametersComprobation($usersXml, $userDni, $userName, $userLastName, $userAge, $userPassword)) {
             $registerWarning = $warningsXml->xpath("//warning[@state='parameters']");
             echo $registerWarning[0]->asXml();            
             break;
@@ -61,33 +57,25 @@ switch ($action) {
             echo $registerWarning[0]->asXml();            
             break;
         } 
-
         addNewUser($usersXml, $userDni, $userName, $userLastName, $userAge, $userPassword);
         
-        
-        ///////
-        // header('location: ./register.php');
         break;
 
     case "logout":
 
         if (!userExist($userDni, $usersXml)) {
-
             $logoutWarning = $warningsXml->xpath("//warning[@state='unknownUser']");
             echo $logoutWarning[0]->asXml();            
             break;
         } 
 
         if (userActive($userDni, $connectionsXml)) {
-            
             closeConnection($userDni, $connectionsXml);
-            
         } else {
             $logoutWarning = $warningsXml->xpath("//warning[@state='notExist']");
             echo $logoutWarning[0]->asXml();
         }
-        
-        // session_destroy();
+        session_destroy();
         break;
 
     case "admin":
@@ -101,12 +89,8 @@ switch ($action) {
             case "connections":
                 echo $connectionsXml->asXml();
                 break;
-
         }
-
         break;
-
-
 }
 
 ?>

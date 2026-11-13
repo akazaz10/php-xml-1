@@ -1,4 +1,5 @@
 <?php
+
 date_default_timezone_set('Europe/Madrid');
 
 function xmlFormater($xmlData, $route) {

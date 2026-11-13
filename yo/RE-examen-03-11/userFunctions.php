@@ -1,5 +1,7 @@
 <?php
-require './config.php';
+session_start();
+
+require_once './config.php';
 
 
 function userActive($userDni, $xmlConnections) {
@@ -10,6 +12,9 @@ function userActive($userDni, $xmlConnections) {
 
 }
 
+function parametersComprobation($usersXml, $userDni, $userName, $userLastName, $userAge, $userPassword) {
+    return (empty($userDni) || empty($userName) || empty($userLastName) || empty($userAge) || empty($userPassword)) ? true : false;
+}
 
 function addNewUser($usersXml, $userDni, $userName, $userLastName, $userAge, $userPassword) {
 
@@ -35,7 +40,7 @@ function userExist($userDni, $xmlUsers) {
 }
 
 
-function loginValidator($userDni, $userPassword, $xmlUsers) {
+function passwordValidator($userDni, $userPassword, $xmlUsers) {
 
     $existingUser = $xmlUsers->xpath("user[dni='{$userDni}']");
     $user = $existingUser[0];
