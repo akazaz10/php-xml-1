@@ -9,10 +9,10 @@ function userActive($userDni, $xmlConnections) {
     $activeConnection = $xmlConnections->xpath("connection[dni = '{$userDni}' and status = 'active']");
 
     return !empty($activeConnection) ? true : false;
-
 }
 
 function parametersComprobation($usersXml, $userDni, $userName, $userLastName, $userAge, $userPassword) {
+
     return (empty($userDni) || empty($userName) || empty($userLastName) || empty($userAge) || empty($userPassword)) ? true : false;
 }
 
@@ -36,7 +36,6 @@ function userExist($userDni, $xmlUsers) {
     $existingUser = $xmlUsers->xpath("user[dni='{$userDni}']");
 
     return !empty($existingUser) ? true : false;
-
 }
 
 
@@ -49,8 +48,7 @@ function passwordValidator($userDni, $userPassword, $xmlUsers) {
         'user'=> $user
     ];
 
-    return $output;
-    
+    return $output;  
 }
 
 

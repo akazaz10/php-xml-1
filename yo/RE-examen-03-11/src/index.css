@@ -19,7 +19,6 @@ body {
     }
 
     button {
-        /* border: none; */
         font-size: 1rem;
         color: rgb(241, 237, 237);
         cursor: pointer;
