@@ -11,6 +11,7 @@ function addNewConnection($connectionsXml) {
     $newConnection->addchild('login_time', date('Y-m-d H:i:s'));
     $newConnection->addChild('logout_time', '');
     $newConnection->addChild('status', 'active');
+    $newConnection->addChild('time_connection', '');
 
     xmlFormater($connectionsXml, "./xml/connections.xml");  
 
@@ -23,11 +24,28 @@ function closeConnection($userDni, $connectionsXml) {
     $currentConnection = $connectionsXml->xpath("//connection[dni = '{$userDni}' and status = 'active']");
     $currentConnection[0]->logout_time = date('Y-m-d H:i:s');
     $currentConnection[0]->status = 'expired';
+    $currentConnection[0]->time_connection = sessionTime($currentConnection[0]->login_time, $currentConnection[0]->logout_time);
 
     xmlFormater($connectionsXml, "./xml/connections.xml");
 
     echo $currentConnection[0]->asXml();
 
+}
+
+
+
+function sessionTime($loginTime, $logoutTime) {
+
+    $newA = strtotime($loginTime);
+    $newB = strtotime($logoutTime);
+    $result = $newB - $newA;
+
+
+    $horas = floor($result / 3600);
+    $minutos = floor(($result % 3600) / 60);
+    $segundos = $result % 60;
+
+    return "Tiempo de conexión: {$horas} horas, {$minutos} minutos, {$segundos} segundos";;
 }
 
 

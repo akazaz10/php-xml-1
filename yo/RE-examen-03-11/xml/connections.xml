@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <connections>
   <connection>
-    <dni from="session">z36986</dni>
-    <name from="session">Sebastian</name>
-    <last_name from="session">Martinez</last_name>
-    <login_time>2026-11-13 01:02:24</login_time>
-    <logout_time>2026-11-13 01:02:46</logout_time>
-    <status>expired</status>
-  </connection>
-  <connection>
     <dni from="session">m1234</dni>
     <name from="session">Lionel</name>
     <last_name from="session">Messi</last_name>
-    <login_time>2026-11-13 01:40:46</login_time>
-    <logout_time>2026-11-13 01:41:00</logout_time>
+    <login_time>2026-11-13 21:15:29</login_time>
+    <logout_time>2026-11-13 21:15:38</logout_time>
     <status>expired</status>
+    <time_connection>Tiempo de conexión: 0 horas, 0 minutos, 9 segundos</time_connection>
   </connection>
 </connections>
